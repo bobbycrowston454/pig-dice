@@ -45,10 +45,14 @@ h1 {
  }
 #gifpic1 {
   padding-left: 450px;
+  border-radius: 400px;
 }
 #pic {
   display: none;
 }
 #stop {
+  display: none;
+}
+#stopit {
   display: none;
 }

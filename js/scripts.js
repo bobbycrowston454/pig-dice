@@ -26,28 +26,31 @@ function update() {
         d1 = roll();
         die0.innerHTML = d0;
         die1.innerHTML = d1;
-
+          $("#pic").show();
         // score = d0 + d1;
         // score += currentscore + d1 + d0;
         // console.log(score);
 
         if (d0 === 1 || d1 === 1) {
             totalscore = 0;
-          $("#stop").show();
+          // $("#stopit").show();
+
 
 
         } else  {
             currentscore = d0 + d1;
             score += d1 + d0;
-              $("#pic").show();
-              $("#pic").hide();
+              // $("#pic").show();
+              // $("#stopit").hide();
         }
         if(d0 === 1 || d1 === 1){
           $(".diceOne").hide();
           $(".diceTwo").show();
+          // $("#stopit").show();
         } else if (d0 > 1 || d1 > 1){
           $(".diceOne").show();
           $(".diceTwo").hide();
+          // $("#stopit").hide();
         }
 }
 function update1() {
@@ -64,21 +67,27 @@ function update1() {
 
         if (d2 === 1 || d3 === 1) {
             totalscore2 = 0;
-            $("#stop").show();
+            // $("#stopit").show();
+            // $("#pic").hide();
 
         } else  {
             currentscore1 = d2 + d3;
             score1 += d2 + d3;
-            $("#pic").show();
-            $("#stop").hide();
+            // $("#pic").show();
+            // $("#stopit").hide();
+
 
         }
         if(d2 === 1 || d3 === 1){
           $(".diceTwo").hide();
           $(".diceOne").show();
+          // $("#stopit").show();
+
         }else if (d2 > 1 || d3 > 1){
           $(".diceTwo").show();
           $(".diceOne").hide();
+          // $("#stopit").hide();
+
         }
 
 }
@@ -87,11 +96,14 @@ function update1() {
 $(document).ready(function(){
   $("#roll").click(function(event){
     event.preventDefault();
-    $("#pic").show();
+
+
+
 
     totalscore += currentscore;
     $("#totalscore").text(totalscore);
     currentscore = 0;
+
 
   });
     $("#roll1").click(function(event){
@@ -99,6 +111,8 @@ $(document).ready(function(){
     totalscore2 += currentscore1;
     $("#totalscore2").text(totalscore2);
     currentscore1 = 0;
+
+
   });
 
   $("#hold").click(function(event){
@@ -116,12 +130,6 @@ $(document).ready(function(){
       alert("You Win!");
     }
     console.log(totalscore2);
-    if(turn === 0)
-    {
-      turn = 1;
-      playerOne.totalScore += currentscore;
-      currentscore = 0;
-    }
     if(turn === 1)
     {
       playerTwo.totalScore += currentscore1;
