@@ -1,0 +1,19 @@
+h2{
+  border: solid;
+  border-width: 1px,3px,3px,1px;
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+}
+
+/*.diceTwo {
+  display: none;
+
+}
+.diceThree {
+  display: none;*/
+
+/*}
+body {
+  background-image: url("../dice.jpg");
+}*/

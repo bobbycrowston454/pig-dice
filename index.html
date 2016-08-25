@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="Bootstrap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class = "row">
+        <div class="jumbotron">
+          <h1>Pig Dice</h1>
+        </div>
+        <form id="select">
+          <!-- <label for="players">Number of Players:</label>
+          <select id="players">
+            <option value="single">Single Player</option>
+            <option value="two">Two Player</option>
+            <option value="vs">Player vs Computer</option>
+          </select><hr> -->
+          <div class="col-md-6">
+            <div class= "diceOne">
+              <h3>Player 1</h3>
+              <h4>Total: <span id="score">0</span></h4>
+              <h3>Current Total: <span id="totalscore">0</span></h3>
+              <div id ="dice1">
+                <span id="die0">0</span>
+                <span id="die1">0</span>
+              </div>
+              <input type="button" value="Roll" id="roll" class = "btn btn-primary" onclick="update();">
+              <!-- <button type="submit" id = "hold" name="hold">Hold</button> -->
+            </div>
+          </div>
+        <!-- </form> -->
+        <!-- <form class="player"> -->
+          <div class= "col-md-6">
+            <div class="diceTwo">
+              <h3>Player 2</h3>
+              <h4>Total: <span id="score1">0</span></h4>
+              <h3>Current Total: <span id="totalscore2">0</span></h3>
+              <div id = "dice">
+                <span id="die2">0</span>
+                <span id="die3">0</span>
+              </div>
+              <input type="button" value="Roll" id="roll1" class = "btn btn-primary" onclick="update1();">
+              <!-- <button type="submit" id = "hold" name="hold">Hold</button> -->
+            </div>
+          </div>
+            <button type="submit" class = "btn btn-success" id = "hold" name="hold">Hold</button>
+          <!-- <div class="diceThree">
+            <h2>Computer</h2>
+            <h4>Turn: <span id="scores">0</span></h4>
+            <h3>Current Total: <span id="totalscore">0</span><h3>
+            <div id = "dice">
+              <span id="die4">0</span>
+              <span id="die5">0</span> -->
+            <!-- </div><button type="submit" id="hold" name="hold">Hold</button> -->
+          </div>
+        </form>
+      </div>
+    </body>
+</html>
