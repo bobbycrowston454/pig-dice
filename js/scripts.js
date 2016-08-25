@@ -33,10 +33,14 @@ function update() {
 
         if (d0 === 1 || d1 === 1) {
             totalscore = 0;
-            alert("Next");
+          $("#stop").show();
+
+
         } else  {
             currentscore = d0 + d1;
             score += d1 + d0;
+              $("#pic").show();
+              $("#pic").hide();
         }
         if(d0 === 1 || d1 === 1){
           $(".diceOne").hide();
@@ -60,10 +64,14 @@ function update1() {
 
         if (d2 === 1 || d3 === 1) {
             totalscore2 = 0;
-            alert("Next");
+            $("#stop").show();
+
         } else  {
             currentscore1 = d2 + d3;
             score1 += d2 + d3;
+            $("#pic").show();
+            $("#stop").hide();
+
         }
         if(d2 === 1 || d3 === 1){
           $(".diceTwo").hide();
@@ -79,6 +87,7 @@ function update1() {
 $(document).ready(function(){
   $("#roll").click(function(event){
     event.preventDefault();
+    $("#pic").show();
 
     totalscore += currentscore;
     $("#totalscore").text(totalscore);
@@ -94,21 +103,18 @@ $(document).ready(function(){
 
   $("#hold").click(function(event){
     event.preventDefault();
-    // if ("playerOne ")
 
     console.log("hold: " + totalscore);
-    // totalscore += currentscore;
     console.log("totalscore: " + totalscore);
-    // $("#totalscore").text(totalscore);
     $("#score").text(score);
-    // currentscore = 0;
-
-    // totalscore2 += currentscore1;
+    if(score >= 100){
+      alert("You Win!");
+    }
     console.log("totalscore2: " + totalscore2);
-    // $("#totalscore2").text(totalscore2);
     $("#score1").text(score1);
-    // currentscore1 = 0;
-
+    if(score1 >= 100){
+      alert("You Win!");
+    }
     console.log(totalscore2);
     if(turn === 0)
     {
@@ -123,5 +129,4 @@ $(document).ready(function(){
       turn = 0;
     }
   });
-
-  });
+});
