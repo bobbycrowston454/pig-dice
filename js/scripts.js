@@ -33,6 +33,7 @@ function update() {
 
         if (d0 === 1 || d1 === 1) {
             totalscore = 0;
+            alert("Next");
         } else  {
             currentscore = d0 + d1;
             score += d1 + d0;
@@ -59,6 +60,7 @@ function update1() {
 
         if (d2 === 1 || d3 === 1) {
             totalscore2 = 0;
+            alert("Next");
         } else  {
             currentscore1 = d2 + d3;
             score1 += d2 + d3;
@@ -92,7 +94,7 @@ $(document).ready(function(){
 
   $("#hold").click(function(event){
     event.preventDefault();
-    console.log("INININININININ");
+    // if ("playerOne ")
 
     console.log("hold: " + totalscore);
     // totalscore += currentscore;
@@ -111,9 +113,13 @@ $(document).ready(function(){
     if(turn === 0)
     {
       turn = 1;
+      playerOne.totalScore += currentscore;
+      currentscore = 0;
     }
     if(turn === 1)
     {
+      playerTwo.totalScore += currentscore1;
+      currentscore1 = 0;
       turn = 0;
     }
   });
